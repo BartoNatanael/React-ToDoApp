@@ -38,7 +38,7 @@ class AddTask extends Component {
                 date: this.minDate
             })}
         }else{
-            console.log('za krótko')
+            console.log('To short')
         }
       }
     
@@ -48,15 +48,15 @@ class AddTask extends Component {
 
         return ( 
             <div className='form'>
-                <input type="text" placeholder='dodaj zadanie' value={this.state.text} onChange={this.handleText}/>
+                <input type="text" placeholder='Add tast' value={this.state.text} onChange={this.handleText}/><br/>
                 <input type="checkbox" checked={this.state.checked} id="important" onChange={this.handleChecked}/>
-                <label htmlFor="important">Priorytet</label>
+                <label htmlFor="important">Set priority</label>
                 <br/>
-                <label htmlFor="date">Do kiedy zrobić: </label>
+                <label htmlFor="date">Set deadline: </label>
                 <input type="date" id="date" value={this.state.date}
                 min={this.minDate}max={maxDate} onChange={this.handleDate}/>
                 <br/>
-                <button onClick={this.handleClick}>Dodaj</button>
+                <button onClick={this.handleClick}>Add!</button>
             </div>
          );
     }

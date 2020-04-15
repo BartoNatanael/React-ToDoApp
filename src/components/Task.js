@@ -3,16 +3,16 @@ import React from 'react';
 const Task = (props) => {
 
     const style = {
-        color: 'red',
+        color: '#ff6961',
     }
     const {text, date, id, active, important, finishDate} = props.task;
     if(active){
         return ( 
         <div>
             <p>
-        <strong style={important ? style : null}>{text}</strong> - do <span>{date} </span>
-        <button onClick={() =>props.change(id)}>Zostało zrobione</button>
-        <button onClick={() => props.delete(id)}>X</button>
+        <strong style={important ? style : null}>{text}</strong> <br/> deadline <span>{date} </span>
+        <button onClick={() =>props.change(id)}>DONE</button>
+        <button onClick={() => props.delete(id)} className='secondBtn'>X</button>
             </p>
         </div> 
     );} else {
@@ -20,10 +20,10 @@ const Task = (props) => {
         return (
             <div>
                 <p>
-        <strong >{text}</strong>  <em>(do <span>{date} </span>)</em>
+        <strong >{text}</strong>  <em>(deadline <span>{date} </span>)</em>
         <br/>
-        - potwierdzenie wykonania <span>{finish}</span>
-        <button onClick={() => props.delete(id)}>X</button>
+        - task done on <span>{finish}</span>
+        <button onClick={() => props.delete(id)} className='secondBtn'>X</button>
             </p>
             </div>
         )

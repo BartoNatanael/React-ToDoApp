@@ -31,18 +31,18 @@ const TaskList = (props) => {
     const doneTasks = done.map(task => <Task key={task.id} task={task} delete={props.delete} change={props.change}/>)
 
     return (
-        <> 
+        <div className="flex">
         <div className='active'>
-            <h1>Zadania do zrobienia</h1>
-            {activeTasks.length > 0 ? activeTasks : <p>Brak zadań, ale jesteś szczęśliwym człowiekiem!</p>}
+            <h1>Tasks to do: ({activeTasks.length})</h1>
+            {activeTasks.length > 0 ? activeTasks : <p>No tasks to do, you are happy man!</p>}
         </div>
-        <hr/>
+        
         <div className="done">
-            <h3>Zadnia zrobione: ({doneTasks.length})</h3>
-            {done.length> 5 &&<span style={{fontSize: '10px'}}>Wyświetlonych jest jedynie 5 ostatnich elementów</span>}
+            <h1>Finished tasks: ({doneTasks.length})</h1>
+            {done.length> 5 &&<span style={{fontSize: '10px'}}>Only 5 last tasks are being shown</span>}
             {doneTasks.slice(0,5)}
         </div>
-        </>
+        </div> 
      );
 }
  

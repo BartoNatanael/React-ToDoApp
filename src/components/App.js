@@ -10,7 +10,7 @@ class App extends Component {
     tasks:[
       {
         id: 0,
-        text: 'Zagrać wreszcie w Wiedźmina 3',
+        text: 'Finally play Witcher 3',
         date: "2020-05-12",
         important: true,
         active: true,
@@ -18,7 +18,7 @@ class App extends Component {
       },
       {
         id: 1,
-        text: 'Wypić piwo z kolegami',
+        text: 'Drink beer with friends',
         date: "2020-05-12",
         important: true,
         active: true,
@@ -26,7 +26,7 @@ class App extends Component {
       },
       {
         id: 2,
-        text: 'Pójść na spacer',
+        text: 'Go to park for walk',
         date: "2020-05-12",
         important: false,
         active: true,
@@ -34,7 +34,7 @@ class App extends Component {
       },
       {
         id: 3,
-        text: 'Zjeść makaron',
+        text: 'Eat pasta',
         date: "2020-05-12",
         important: false,
         active: true,
@@ -42,7 +42,7 @@ class App extends Component {
       },
       {
         id: 4,
-        text: 'Zrobić zakupy',
+        text: 'Go to Biedronka',
         date: "2020-05-12",
         important: false,
         active: true,
@@ -50,7 +50,7 @@ class App extends Component {
       },
       {
         id: 5,
-        text: 'Pójść na rower',
+        text: 'Go cycling',
         date: "2020-05-12",
         important: true,
         active: true,
@@ -58,7 +58,7 @@ class App extends Component {
       },
       {
         id: 6,
-        text: 'Pospać',
+        text: 'Make the bed',
         date: "2020-05-12",
         important: true,
         active: true,
@@ -121,7 +121,7 @@ class App extends Component {
     <div className="App">
       <h1>To Do App</h1>
       <AddTask add={this.AddTask}/>
-      <hr/>
+      
       <TaskList tasks={this.state.tasks} delete={this.deleteTask} change={this.changeTaskStatus}/>
     </div> )
   }
